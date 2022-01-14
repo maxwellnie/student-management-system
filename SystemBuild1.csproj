@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DB258109-9FEF-496B-ABCF-661E9427EC1E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>学生选课系统</RootNamespace>
+    <AssemblyName>学生选课系统</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SunnyUI, Version=3.0.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SunnyUI-master\Bin\net40\SunnyUI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="主要窗体\SelectCourseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="主要窗体\SelectCourseForm.Designer.cs">
+      <DependentUpon>SelectCourseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="操作类窗体\AddOrUpdataCourseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="操作类窗体\AddOrUpdataCourseForm.Designer.cs">
+      <DependentUpon>AddOrUpdataCourseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="公共方法类\ClassShared.cs" />
+    <Compile Include="公共方法类\DataBase.cs" />
+    <Compile Include="操作类窗体\AddOrUpdataStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="操作类窗体\AddOrUpdataStudentForm.Designer.cs">
+      <DependentUpon>AddOrUpdataStudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="操作类窗体\DataGridViewFormStudentCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="操作类窗体\DataGridViewFormStudentCourse.Designer.cs">
+      <DependentUpon>DataGridViewFormStudentCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="操作类窗体\DataGridViewFormTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="操作类窗体\DataGridViewFormTeacher.Designer.cs">
+      <DependentUpon>DataGridViewFormTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="操作类窗体\DataUpdataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="操作类窗体\DataUpdataForm.Designer.cs">
+      <DependentUpon>DataUpdataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="消息提示框\errorMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="消息提示框\errorMessageBox.Designer.cs">
+      <DependentUpon>errorMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="主要窗体\frmCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="主要窗体\frmCourse.designer.cs">
+      <DependentUpon>frmCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="主要窗体\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="主要窗体\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="主要窗体\frmSC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="主要窗体\frmSC.designer.cs">
+      <DependentUpon>frmSC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="主要窗体\frmStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="主要窗体\frmStudent.designer.cs">
+      <DependentUpon>frmStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体移动向量\WindowsLeaveForMouseDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="窗体移动向量\WindowsLeaveForMouseDown.Designer.cs">
+      <DependentUpon>WindowsLeaveForMouseDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="自定义控件\FUIDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="主要窗体\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="主要窗体\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="消息提示框\MessageV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="消息提示框\MessageV.designer.cs">
+      <DependentUpon>MessageV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="消息提示框\okMessageBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="消息提示框\okMessageBoxForm.Designer.cs">
+      <DependentUpon>okMessageBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="主要窗体\SelectCourseForm.resx">
+      <DependentUpon>SelectCourseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="操作类窗体\AddOrUpdataCourseForm.resx">
+      <DependentUpon>AddOrUpdataCourseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="操作类窗体\AddOrUpdataStudentForm.resx">
+      <DependentUpon>AddOrUpdataStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="操作类窗体\DataGridViewFormStudentCourse.resx">
+      <DependentUpon>DataGridViewFormStudentCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="操作类窗体\DataGridViewFormTeacher.resx">
+      <DependentUpon>DataGridViewFormTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="操作类窗体\DataUpdataForm.resx">
+      <DependentUpon>DataUpdataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="消息提示框\errorMessageBox.resx">
+      <DependentUpon>errorMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="主要窗体\frmCourse.resx">
+      <DependentUpon>frmCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="主要窗体\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="主要窗体\frmSC.resx">
+      <DependentUpon>frmSC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="主要窗体\frmStudent.resx">
+      <DependentUpon>frmStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="主要窗体\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="消息提示框\MessageV.resx">
+      <DependentUpon>MessageV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="消息提示框\okMessageBoxForm.resx">
+      <DependentUpon>okMessageBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\书.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\书副本.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kjgjj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\690114.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BF2856EE0680CFC0702CF2343DCB73EA%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\菜单.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\菜单1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4948441.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7719932.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4641654.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\添加 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删除.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\查询 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\查询.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\成功.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\成功 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\失败.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\失败 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1722679.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2341508.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\课程.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\修改.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
